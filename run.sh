@@ -7,7 +7,7 @@ cp -R $SRC_COVERAGE_DIR/* gh-pages/$DST_COVERAGE_DIR
 cd gh-pages
 
 diff=$(git status -s | grep $DST_COVERAGE_DIR)
-if [ -z $diff ]; then
+if [[ -z $diff ]]; then
     echo 'Skip gh-pages step because the coverage was not updated.'
     exit 0
 fi
