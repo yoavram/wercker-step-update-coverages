@@ -3,7 +3,7 @@ git clone -b gh-pages git@github.com:$GIT_USERNAME/$GIT_REPO.git gh-pages
 git config --global user.email "$GIT_EMAIL"
 git config --global user.name "$GIT_USERNAME"
 
-cp -R $SRC_COVERAGE_DIR gh-pages/$DST_COVERAGE_DIR
+cp -R $SRC_COVERAGE_DIR/* gh-pages/$DST_COVERAGE_DIR
 cd gh-pages
 
 diff=$(git status -s | grep $DST_COVERAGE_DIR)
